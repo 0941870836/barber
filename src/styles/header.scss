@@ -1,0 +1,52 @@
+.app__header{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(72, 69, 69);
+    .left__header{
+        margin: 20px 20px;
+    }
+    .nav-item{
+        list-style: none;
+    }
+    .service{
+        display: flex;
+        border: 1px solid #DDDA;
+        border-radius: 5px;
+        padding: 5px 25px;
+        color: #fff;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        cursor: pointer;
+        text-decoration: none;
+       
+        span{
+            margin: 0 10px;
+            text-decoration: none;
+        }
+    }
+    .product{
+        display: flex;
+        border: 1px solid #DDDA;
+        border-radius: 5px;
+        padding: 5px 25px;
+        color: #fff;
+        text-transform: uppercase;
+        cursor: pointer;
+        text-decoration: none;
+      
+        span{
+            margin: 0 10px;
+        }
+    }
+    .menu{
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+        .icon{
+            border: 1px solid #DDDA;
+            border-radius: 5px;
+            padding: 10px 25px;
+            color: #fff;
+        }
+    }
+}

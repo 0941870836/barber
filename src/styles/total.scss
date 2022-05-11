@@ -1,0 +1,25 @@
+.bill__cart{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    .total__service{
+        display: flex;
+        align-items: center;
+        color: #FE7A15;
+        font-weight: bold;
+        font-size: 25px;
+    }
+    .btn__green{
+        background-color: rgb(66, 219, 58);
+        font-weight: bold;
+        font-size: 15px;
+        padding: 10px 10px;
+        color: #fff;
+        margin: 0 20px 0 100px;
+        &:hover{
+            background-color: rgb(66, 219, 58);
+            opacity: 0.9;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;;
+        }
+    }
+}
