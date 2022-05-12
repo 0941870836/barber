@@ -1,10 +1,12 @@
 import { Button, Typography } from "@mui/material";
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
+import { NavLink } from "react-router-dom";
 import { QuantityCustomer, TotalCustomer } from "../customers/selector";
+import { formatPrice } from "../utils/common";
 
 export default function Service() {
-  const customerList = useSelector((state) => state.customer);
+  const customerList = useSelector((state) => state.customer.HotToc);
   const [color, setColor] = useState(customerList);
 
   const [total, setTotal] = useState(0);
@@ -22,10 +24,13 @@ export default function Service() {
     setColor(newCustomer);
     setQty(
       customer.TrangThai
-        ? customer.quantity - customer.quantity
-        : customer.quantity + 1
+        ? newCustomer.reduce((count, customer) => count - customer.quantity, 0)
+        : newCustomer.reduce((count, customer) => count + customer.quantity, 0)
     );
+    console.log(newCustomer);
     setTotal(customer.TrangThai ? customer.Gia - customer.Gia : customer.Gia);
+
+    // localStorage.setItem("customer", JSON.stringify(customer));
   };
 
   return (
@@ -64,8 +69,10 @@ export default function Service() {
           </div>
         </div>
         <div className="bill__cart">
-          <div className="total__service">{total} VND</div>
-          <Button className="btn__green">XUẤT HÓA ĐƠN [{qty}]</Button>
+          <div className="total__service">{formatPrice(total)}</div>
+          <NavLink className="btn__green" to="/bill">
+            XUẤT HÓA ĐƠN [{qty}]
+          </NavLink>
         </div>
       </div>
     </>

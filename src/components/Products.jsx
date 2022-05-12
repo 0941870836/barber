@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 
 export default function Product() {
-  const customerList = useSelector((state) => state.customer);
+  const customerList = useSelector((state) => state.customer.HotToc);
   const [color, setColor] = useState(customerList);
 
   const [total, setTotal] = useState(0);
@@ -28,7 +28,7 @@ export default function Product() {
           <div className="flex__product">
             <div className="product__1">
               <div className="product__left">
-                <h4>volca</h4>
+                <h4>volcanic</h4>
                 <span>50.000 VND</span>
               </div>
             </div>

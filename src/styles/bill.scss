@@ -1,0 +1,40 @@
+.container{
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(31, 29, 29, 0.929);
+    padding: 50px 0px;
+    .creator{
+        p{
+        font-size: 20px;
+        color: #FDC094;
+    }
+    }
+    .bill__customer{
+        margin-top: 50px;
+        display: flex;
+        flex-direction: row;
+        padding: 10px 50px;
+        justify-content: space-around;
+        font-size: 20px;
+        color: #FDC094;
+        &::after{
+            content: "";
+            border: 0.5px dotted #FDC094;
+            position: absolute;
+            top: 310px;
+            width: 55%;
+        }
+    }
+    .bill__total{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px 60px;
+        color: #FDC094;
+        font-size: 20px;
+        margin-top: 25px;
+        p{
+            margin-right: 20px;
+        }
+    }
+}
